@@ -6,6 +6,8 @@ import 'package:flutternice/ImageIconDemo.dart';
 import 'package:flutternice/NewRoute.dart';
 import 'package:flutternice/ProgressIndicator.dart';
 import 'package:flutternice/StateManager.dart';
+import 'package:flutternice/SwitchCheckBoxDemo.dart';
+import 'package:flutternice/TextFormField.dart';
 import 'package:flutternice/TextStyleDemo.dart';
 import 'package:flutternice/TipRoute.dart';
 
@@ -29,6 +31,8 @@ class MyApp extends StatelessWidget {
         "TextStyleDemo":(context) => TextStyleDemo(),
         "ButtonDemo":(context) => ButtonDemo(),
         "ImageIconDemo":(context) => ImageIconDemo(),
+        "SwitchCheckBoxDemo":(context) => SwitchCheckBoxDemo(),
+        "TextFormFieldDemo":(context) => TextFormFieldDemo(),
         "ProgressIndicator":(context) => ProgressIndicatorWidget(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
@@ -70,7 +74,6 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.pushNamed(context, "AssetsDemo");
   }
 
-
   _goToStateManager() {
     Navigator.pushNamed(context, "StateManager");
   }
@@ -86,6 +89,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   _goToImageIconDemo() {
     Navigator.pushNamed(context, "ImageIconDemo");
+  }
+
+  _goToSwitchCheckBoxDemo() {
+    Navigator.pushNamed(context, "SwitchCheckBoxDemo");
+  }
+
+  _goToTextFormFieldDemo() {
+    Navigator.pushNamed(context, "TextFormFieldDemo");
   }
 
   _goToProgressIndicator() {
@@ -140,6 +151,10 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("Button demo")),
             FlatButton(onPressed: _goToImageIconDemo, 
             child: Text("ImageIcon demo")),
+            FlatButton(onPressed: _goToSwitchCheckBoxDemo, 
+            child: Text("SwitchCheckBox demo")),
+             FlatButton(onPressed: _goToTextFormFieldDemo, 
+            child: Text("TextFormFieldDemo demo")),
             FlatButton(
               child: Text("ProgressIndicatorWidget"),
               onPressed: _goToProgressIndicator,
