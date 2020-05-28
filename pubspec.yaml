@@ -42,6 +42,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/learn_to_value.jpg
+    - assets/avatar.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

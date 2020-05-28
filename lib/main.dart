@@ -1,5 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutternice/AssetsDemo.dart';
+import 'package:flutternice/ButtonDemo.dart';
+import 'package:flutternice/ImageIconDemo.dart';
 import 'package:flutternice/NewRoute.dart';
 import 'package:flutternice/ProgressIndicator.dart';
 import 'package:flutternice/StateManager.dart';
@@ -23,7 +26,9 @@ class MyApp extends StatelessWidget {
         "newRoute":(context) => NewRoute(),
         "AssetsDemo":(context) => AssetsDemo(),
         "StateManager":(context) => StateManager(),
-        "TextStyleDem":(context) => TextStyleDemo(),
+        "TextStyleDemo":(context) => TextStyleDemo(),
+        "ButtonDemo":(context) => ButtonDemo(),
+        "ImageIconDemo":(context) => ImageIconDemo(),
         "ProgressIndicator":(context) => ProgressIndicatorWidget(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
@@ -71,9 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   _goToTextStyleDemo() {
-    Navigator.pushNamed(context, "TextStyleDem");
+    Navigator.pushNamed(context, "TextStyleDemo");
   }
 
+  _goToButtonDemo() {
+    Navigator.pushNamed(context, "ButtonDemo");
+  }
+
+
+  _goToImageIconDemo() {
+    Navigator.pushNamed(context, "ImageIconDemo");
+  }
 
   _goToProgressIndicator() {
     Navigator.pushNamed(context, 'ProgressIndicator');
@@ -84,7 +97,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
-
         title: Text(widget.title),
       ),
       body: Center(
@@ -100,12 +112,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Text("Open new route"),
-              textColor: Colors.blue,
               onPressed: _goToNewRoute,
             ),
             FlatButton(
               child: Text("Open tips"),
-              textColor: Colors.green,
               onPressed: _goToTips,
             ),
             Column(
@@ -116,22 +126,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             FlatButton(
               child: Text("Assets demo"),
-              textColor: Colors.amberAccent,
               onPressed: _goToAssetsDemo,
             ),
             FlatButton(
               child: Text("StateManager demo"),
-              textColor: Colors.green[400],
               onPressed: _goToStateManager,
             ),
             FlatButton(
               child: Text("TextStyle demo"),
-              textColor: Colors.black,
               onPressed: _goToTextStyleDemo,
             ),
+            FlatButton(onPressed: _goToButtonDemo, 
+            child: Text("Button demo")),
+            FlatButton(onPressed: _goToImageIconDemo, 
+            child: Text("ImageIcon demo")),
             FlatButton(
               child: Text("ProgressIndicatorWidget"),
-              textColor: Colors.greenAccent,
               onPressed: _goToProgressIndicator,
             )
           ],
