@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutternice/AssetsDemo.dart';
 import 'package:flutternice/NewRoute.dart';
 import 'package:flutternice/ProgressIndicator.dart';
+import 'package:flutternice/StateManager.dart';
+import 'package:flutternice/TextStyleDemo.dart';
 import 'package:flutternice/TipRoute.dart';
 
 import 'EnglishWords.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "newRoute":(context) => NewRoute(),
         "AssetsDemo":(context) => AssetsDemo(),
+        "StateManager":(context) => StateManager(),
+        "TextStyleDem":(context) => TextStyleDemo(),
         "ProgressIndicator":(context) => ProgressIndicatorWidget(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
@@ -62,6 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
 
+  _goToStateManager() {
+    Navigator.pushNamed(context, "StateManager");
+  }
+
+  _goToTextStyleDemo() {
+    Navigator.pushNamed(context, "TextStyleDem");
+  }
+
+
   _goToProgressIndicator() {
     Navigator.pushNamed(context, 'ProgressIndicator');
   }
@@ -83,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
+              style: Theme.of(context).textTheme.bodyText1,
             ),
             FlatButton(
               child: Text("Open new route"),
@@ -105,6 +118,16 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Assets demo"),
               textColor: Colors.amberAccent,
               onPressed: _goToAssetsDemo,
+            ),
+            FlatButton(
+              child: Text("StateManager demo"),
+              textColor: Colors.green[400],
+              onPressed: _goToStateManager,
+            ),
+            FlatButton(
+              child: Text("TextStyle demo"),
+              textColor: Colors.black,
+              onPressed: _goToTextStyleDemo,
             ),
             FlatButton(
               child: Text("ProgressIndicatorWidget"),
