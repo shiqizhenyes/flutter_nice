@@ -5,6 +5,7 @@ import 'package:flutternice/ButtonDemo.dart';
 import 'package:flutternice/ImageIconDemo.dart';
 import 'package:flutternice/NewRoute.dart';
 import 'package:flutternice/ProgressIndicator.dart';
+import 'package:flutternice/RowColumnDemo.dart';
 import 'package:flutternice/StateManager.dart';
 import 'package:flutternice/SwitchCheckBoxDemo.dart';
 import 'package:flutternice/TextFormField.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         "SwitchCheckBoxDemo":(context) => SwitchCheckBoxDemo(),
         "TextFormFieldDemo":(context) => TextFormFieldDemo(),
         "ProgressIndicator":(context) => ProgressIndicatorWidget(),
+        "RowColumnDemo":(context) => RowColumnDemo(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -103,6 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.pushNamed(context, 'ProgressIndicator');
   }
 
+  _goToRowColumnDemo() {
+    Navigator.pushNamed(context, "RowColumnDemo");
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -119,8 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.bodyText1,
-            ),
+              style: Theme.of(context).textTheme.bodyText1),
             FlatButton(
               child: Text("Open new route"),
               onPressed: _goToNewRoute,
@@ -153,12 +158,12 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Text("ImageIcon demo")),
             FlatButton(onPressed: _goToSwitchCheckBoxDemo, 
             child: Text("SwitchCheckBox demo")),
-             FlatButton(onPressed: _goToTextFormFieldDemo, 
+            FlatButton(onPressed: _goToTextFormFieldDemo, 
             child: Text("TextFormFieldDemo demo")),
-            FlatButton(
-              child: Text("ProgressIndicatorWidget"),
-              onPressed: _goToProgressIndicator,
-            )
+            FlatButton(onPressed: _goToProgressIndicator,
+              child: Text("ProgressIndicatorWidget")),
+            FlatButton(onPressed: _goToRowColumnDemo,
+            child: Text("RowColumnDemo")),
           ],
         ),
       ),
