@@ -1,16 +1,11 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
-import 'package:flutternice/AssetsDemo.dart';
-import 'package:flutternice/ButtonDemo.dart';
-import 'package:flutternice/ImageIconDemo.dart';
-import 'package:flutternice/NewRoute.dart';
-import 'package:flutternice/ProgressIndicator.dart';
-import 'package:flutternice/RowColumnDemo.dart';
-import 'package:flutternice/StateManager.dart';
-import 'package:flutternice/SwitchCheckBoxDemo.dart';
-import 'package:flutternice/TextFormField.dart';
-import 'package:flutternice/TextStyleDemo.dart';
-import 'package:flutternice/TipRoute.dart';
+import 'package:flutternice/ChapterFour.dart';
+import 'package:flutternice/ChapterOne.dart';
+import 'package:flutternice/ChapterThree.dart';
+import 'package:flutternice/ChapterTwo.dart';
 
 import 'EnglishWords.dart';
 
@@ -26,16 +21,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        "newRoute":(context) => NewRoute(),
-        "AssetsDemo":(context) => AssetsDemo(),
-        "StateManager":(context) => StateManager(),
-        "TextStyleDemo":(context) => TextStyleDemo(),
-        "ButtonDemo":(context) => ButtonDemo(),
-        "ImageIconDemo":(context) => ImageIconDemo(),
-        "SwitchCheckBoxDemo":(context) => SwitchCheckBoxDemo(),
-        "TextFormFieldDemo":(context) => TextFormFieldDemo(),
-        "ProgressIndicator":(context) => ProgressIndicatorWidget(),
-        "RowColumnDemo":(context) => RowColumnDemo(),
+        "chapterOne":(context) => ChapterOne(),
+        "chapterTwo":(context) => ChapterTwo(),
+        "chapterThree":(context) => ChapterThree(),
+        "chapterFour":(context) => ChapterFour(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -50,128 +39,47 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  _goToChapterTwo() {
+    Navigator.pushNamed(context, "chapterTwo");
   }
 
-  void _goToNewRoute() {
-    Navigator.pushNamed(context, "newRoute");
-//    Navigator.push(context, MaterialPageRoute(builder: (context) {
-//      return NewRoute();
-//    }));
+  _goToChapterThree() {
+    Navigator.pushNamed(context, "chapterThree");
   }
 
-  _goToTips() async {
-      var result = await Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return TipRoute(text: "route args",);
-      }));
-      print("返回结果 $result");
-  }
-
-  _goToAssetsDemo() {
-    Navigator.pushNamed(context, "AssetsDemo");
-  }
-
-  _goToStateManager() {
-    Navigator.pushNamed(context, "StateManager");
-  }
-
-  _goToTextStyleDemo() {
-    Navigator.pushNamed(context, "TextStyleDemo");
-  }
-
-  _goToButtonDemo() {
-    Navigator.pushNamed(context, "ButtonDemo");
-  }
-
-
-  _goToImageIconDemo() {
-    Navigator.pushNamed(context, "ImageIconDemo");
-  }
-
-  _goToSwitchCheckBoxDemo() {
-    Navigator.pushNamed(context, "SwitchCheckBoxDemo");
-  }
-
-  _goToTextFormFieldDemo() {
-    Navigator.pushNamed(context, "TextFormFieldDemo");
-  }
-
-  _goToProgressIndicator() {
-    Navigator.pushNamed(context, 'ProgressIndicator');
-  }
-
-  _goToRowColumnDemo() {
-    Navigator.pushNamed(context, "RowColumnDemo");
+  _goToChapterFour() {
+    Navigator.pushNamed(context, "chapterFour");
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.bodyText1),
-            FlatButton(
-              child: Text("Open new route"),
-              onPressed: _goToNewRoute,
-            ),
-            FlatButton(
-              child: Text("Open tips"),
-              onPressed: _goToTips,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        child: Center(
+          child: Container(
+            alignment: Alignment.center,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                RandomWordsWidget(),
+                FlatButton(
+                  onPressed: _goToChapterTwo, 
+                  child: Text("2 First App", style: TextStyle(fontSize: 20.0))),
+                FlatButton(
+                  onPressed: _goToChapterThree, 
+                  child: Text("3 Base widget", style: TextStyle(fontSize: 20.0))),
+                FlatButton(
+                  onPressed: _goToChapterFour, 
+                  child: Text("4 Layout widget", style: TextStyle(fontSize: 20.0))),
               ],
             ),
-            FlatButton(
-              child: Text("Assets demo"),
-              onPressed: _goToAssetsDemo,
-            ),
-            FlatButton(
-              child: Text("StateManager demo"),
-              onPressed: _goToStateManager,
-            ),
-            FlatButton(
-              child: Text("TextStyle demo"),
-              onPressed: _goToTextStyleDemo,
-            ),
-            FlatButton(onPressed: _goToButtonDemo, 
-            child: Text("Button demo")),
-            FlatButton(onPressed: _goToImageIconDemo, 
-            child: Text("ImageIcon demo")),
-            FlatButton(onPressed: _goToSwitchCheckBoxDemo, 
-            child: Text("SwitchCheckBox demo")),
-            FlatButton(onPressed: _goToTextFormFieldDemo, 
-            child: Text("TextFormFieldDemo demo")),
-            FlatButton(onPressed: _goToProgressIndicator,
-              child: Text("ProgressIndicatorWidget")),
-            FlatButton(onPressed: _goToRowColumnDemo,
-            child: Text("RowColumnDemo")),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+          )
+        )
+      )
     );
   }
 }
