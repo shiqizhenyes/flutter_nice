@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/AlignDemo.dart';
 import 'package:flutternice/FlexDemo.dart';
 import 'package:flutternice/RowColumnDemo.dart';
+import 'package:flutternice/StackPpositionedDemo.dart';
+import 'package:flutternice/WrapFlowDemo.dart';
 
 ///第四章 布局组件
 class ChapterFour extends StatelessWidget {
@@ -19,6 +22,25 @@ class ChapterFour extends StatelessWidget {
       return FlexDemo();
     }));
   }
+
+  _goToWrapFlowDemo() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return WrapFlowDemo();
+    }));
+  }
+
+  _goToStackPositionedDemo() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return StackPpositionedDemo();
+    }));
+  }
+
+  _goToAlgnDemo() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return AlignDemo();
+    }));
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -40,6 +62,26 @@ class ChapterFour extends StatelessWidget {
                 FlatButton(
                   onPressed: _goToFlexDemo, 
                   child: Text("FlexDemo")
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                FlatButton(
+                  onPressed: _goToWrapFlowDemo, 
+                  child: Text("WrapFlowDemo")
+                ),
+                FlatButton(
+                  onPressed: _goToStackPositionedDemo, 
+                  child: Text("StackPositionedDemo")
+                ),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                FlatButton(
+                  onPressed: _goToAlgnDemo, 
+                  child: Text("AlignDemo")
                 ),
               ],
             )
