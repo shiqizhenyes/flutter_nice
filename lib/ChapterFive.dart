@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutternice/ContrainedBoxDemo.dart';
+import 'package:flutternice/DecoratedBoxDemo.dart';
 import 'package:flutternice/PaddingDemo.dart';
 
 /// 第五章容器类组件
@@ -20,6 +21,13 @@ _goToContrainedBoxDemo() {
     return ContrainedBoxDemo();
   }));
 }
+
+_goToDecoratedBoxDemo() {
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return DecoratedBoxDemo();
+  }));
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +52,14 @@ _goToContrainedBoxDemo() {
                 ),
               ],
             ),
+            Row(
+              children: <Widget>[
+                  FlatButton(
+                  onPressed: _goToDecoratedBoxDemo, 
+                  child: Text("DecoratedBoxDemo")
+                ),
+              ],
+            )
           ],
         ),
       ),
