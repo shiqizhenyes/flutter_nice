@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/ContrainedBoxDemo.dart';
 import 'package:flutternice/PaddingDemo.dart';
 
 /// 第五章容器类组件
@@ -14,7 +15,10 @@ _goToPaddingDemo() {
 }
 
 _goToContrainedBoxDemo() {
-
+  print("_goToContrainedBoxDemo");
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return ContrainedBoxDemo();
+  }));
 }
 
   @override
