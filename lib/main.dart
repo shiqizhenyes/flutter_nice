@@ -2,6 +2,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/ChapterFive.dart';
 import 'package:flutternice/ChapterFour.dart';
 import 'package:flutternice/ChapterOne.dart';
 import 'package:flutternice/ChapterThree.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "chapterTwo":(context) => ChapterTwo(),
         "chapterThree":(context) => ChapterThree(),
         "chapterFour":(context) => ChapterFour(),
+        "chapterFive":(context) => ChapterFive(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -52,6 +54,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.pushNamed(context, "chapterFour");
   }
 
+  _goToChapterFive() {
+    Navigator.pushNamed(context, "chapterFive");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,6 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 FlatButton(
                   onPressed: _goToChapterFour, 
                   child: Text("4 Layout widget", style: TextStyle(fontSize: 20.0))),
+                FlatButton(
+                  onPressed: _goToChapterFive, 
+                  child: Text("5 Container widget", style: TextStyle(fontSize: 20.0))),
               ],
             ),
           )
