@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutternice/ContrainedBoxDemo.dart';
 import 'package:flutternice/DecoratedBoxDemo.dart';
 import 'package:flutternice/PaddingDemo.dart';
+import 'package:flutternice/TransformDemo.dart';
 
 /// 第五章容器类组件
 class ChapterFive extends StatelessWidget {
@@ -28,6 +29,11 @@ _goToDecoratedBoxDemo() {
   }));
 }
 
+_goToTransformDemo() {
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return TransformDemo();
+  }));
+}
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +60,13 @@ _goToDecoratedBoxDemo() {
             ),
             Row(
               children: <Widget>[
-                  FlatButton(
+                FlatButton(
                   onPressed: _goToDecoratedBoxDemo, 
                   child: Text("DecoratedBoxDemo")
+                ),
+                FlatButton(
+                  onPressed: _goToTransformDemo, 
+                  child: Text("TransformDemo")
                 ),
               ],
             )

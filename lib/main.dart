@@ -1,6 +1,4 @@
 
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutternice/ChapterFive.dart';
 import 'package:flutternice/ChapterFour.dart';
@@ -8,7 +6,6 @@ import 'package:flutternice/ChapterOne.dart';
 import 'package:flutternice/ChapterThree.dart';
 import 'package:flutternice/ChapterTwo.dart';
 
-import 'EnglishWords.dart';
 
 void main() => runApp(MyApp());
 
