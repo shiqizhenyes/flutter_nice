@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/ContainerDemo.dart';
 import 'package:flutternice/ContrainedBoxDemo.dart';
 import 'package:flutternice/DecoratedBoxDemo.dart';
 import 'package:flutternice/PaddingDemo.dart';
@@ -32,6 +33,12 @@ _goToDecoratedBoxDemo() {
 _goToTransformDemo() {
   Navigator.push(context, MaterialPageRoute(builder: (context) {
     return TransformDemo();
+  }));
+}
+
+_goToContainerDemo() {
+  Navigator.push(context, MaterialPageRoute(builder: (context){
+    return ContainerDemo();
   }));
 }
 
@@ -69,7 +76,19 @@ _goToTransformDemo() {
                   child: Text("TransformDemo")
                 ),
               ],
-            )
+            ),
+            Row(
+              children: <Widget>[
+                FlatButton(
+                  onPressed: _goToContainerDemo, 
+                  child: Text("ContainerDemo")
+                ),
+                FlatButton(
+                  onPressed: _goToTransformDemo, 
+                  child: Text("TransformDemo")
+                ),
+              ],
+            ),
           ],
         ),
       ),
