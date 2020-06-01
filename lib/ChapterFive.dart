@@ -4,6 +4,7 @@ import 'package:flutternice/ContainerDemo.dart';
 import 'package:flutternice/ContrainedBoxDemo.dart';
 import 'package:flutternice/DecoratedBoxDemo.dart';
 import 'package:flutternice/PaddingDemo.dart';
+import 'package:flutternice/ScaffoldDemo.dart';
 import 'package:flutternice/TransformDemo.dart';
 
 /// 第五章容器类组件
@@ -39,6 +40,12 @@ _goToTransformDemo() {
 _goToContainerDemo() {
   Navigator.push(context, MaterialPageRoute(builder: (context){
     return ContainerDemo();
+  }));
+}
+
+_goToScaffoldDemo() {
+  Navigator.push(context, MaterialPageRoute(builder: (context) {
+    return ScaffoldDemo();
   }));
 }
 
@@ -84,8 +91,8 @@ _goToContainerDemo() {
                   child: Text("ContainerDemo")
                 ),
                 FlatButton(
-                  onPressed: _goToTransformDemo, 
-                  child: Text("TransformDemo")
+                  onPressed: _goToScaffoldDemo, 
+                  child: Text("ScaffoldDemo")
                 ),
               ],
             ),
