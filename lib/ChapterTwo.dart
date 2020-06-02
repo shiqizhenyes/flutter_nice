@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/AssetsDemo.dart';
 import 'package:flutternice/RouterDemo.dart';
 
 ///第二章 第一个flutter app
@@ -11,6 +12,12 @@ class ChapterTwo extends StatelessWidget {
   _goToRouterDemo() {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return RouterDemo();
+    }));
+  }
+
+  _goToAssetsDemo() {
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return AssetsDemo();
     }));
   }
 
@@ -27,7 +34,8 @@ class ChapterTwo extends StatelessWidget {
           children: <Widget>[
             Row(
               children: <Widget>[
-                FlatButton(onPressed: _goToRouterDemo, child: Text("Router"))
+                FlatButton(onPressed: _goToRouterDemo, child: Text("Router")),
+                FlatButton(onPressed: _goToAssetsDemo, child: Text("AssetsDemo"))
               ],
             ),
           ],

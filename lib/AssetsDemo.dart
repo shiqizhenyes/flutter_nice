@@ -13,7 +13,8 @@ class AssetsDemo extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Image.asset("assets/learn_to_value.jpg")
+          Image.asset("assets/learn_to_value.jpg", scale: 4,),
+          Image.asset("assets/avatar2.jpg", scale: 4,)
         ],
       ),
     );

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutternice/ClipDemo.dart';
 import 'package:flutternice/ContainerDemo.dart';
 import 'package:flutternice/ContrainedBoxDemo.dart';
 import 'package:flutternice/DecoratedBoxDemo.dart';
@@ -46,6 +47,12 @@ _goToContainerDemo() {
 _goToScaffoldDemo() {
   Navigator.push(context, MaterialPageRoute(builder: (context) {
     return ScaffoldDemo();
+  }));
+}
+
+_goToClipDemo() {
+  Navigator.push(context, MaterialPageRoute(builder: (context){
+    return ClipDemo();
   }));
 }
 
@@ -96,6 +103,14 @@ _goToScaffoldDemo() {
                 ),
               ],
             ),
+            Row(
+              children: <Widget>[
+                FlatButton(
+                  onPressed: _goToClipDemo, 
+                  child: Text("ClipDemo")
+                ),
+              ],
+            )
           ],
         ),
       ),
