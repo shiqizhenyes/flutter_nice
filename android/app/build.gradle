@@ -26,6 +26,22 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
+
+    signingConfigs{
+        debug{
+            storeFile file("/Users/shiqizhen/Desktop/zack")
+            storePassword "111111"
+            keyAlias "key0"
+            keyPassword "111111"
+        }
+        release{
+            storeFile file("/Users/shiqizhen/Desktop/zack")
+            storePassword "111111"
+            keyAlias "key0"
+            keyPassword "111111"
+        }
+    }
+
     compileSdkVersion 28
 
     sourceSets {
