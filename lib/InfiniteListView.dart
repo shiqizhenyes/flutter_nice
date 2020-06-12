@@ -1,6 +1,8 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
+
+/// 无限加载列表
 class InfiniteListView extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => InfiniteListViewState();

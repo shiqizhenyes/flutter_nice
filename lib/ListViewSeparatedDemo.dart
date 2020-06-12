@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 
+/// 列表分割线
 class ListViewSeparatedDemo extends StatelessWidget {
   
   @override

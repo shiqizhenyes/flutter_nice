@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutternice/InfiniteListView.dart';
+import 'package:flutternice/ListPinTitile.dart';
 import 'package:flutternice/ListViewBuilderDemo.dart';
 import 'package:flutternice/ListViewDefaultDemo.dart';
 import 'package:flutternice/ListViewSeparatedDemo.dart';
@@ -35,7 +36,12 @@ class ListViewDemo extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
                   return InfiniteListView();
                 }));
-              }, child: Text("InfiniteListView"))
+              }, child: Text("InfiniteListView")),
+              FlatButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ListPinTitle();
+                }));
+              }, child: Text("ListPinTitle"))
             ],
           ),
         ),

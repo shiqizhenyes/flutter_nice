@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutternice/ChapterFive.dart';
 import 'package:flutternice/ChapterFour.dart';
 import 'package:flutternice/ChapterOne.dart';
+import 'package:flutternice/ChapterSeven.dart';
 import 'package:flutternice/ChapterSix.dart';
 import 'package:flutternice/ChapterThree.dart';
 import 'package:flutternice/ChapterTwo.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         "chapterFour":(context) => ChapterFour(),
         "chapterFive":(context) => ChapterFive(),
         "chapterSix":(context) => ChapterSix(),
+        "chapterSeven":(context) => ChapterSeven(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -65,6 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.pushNamed(context, "chapterSix");
   }
 
+  _goToChapterSeven() {
+    Navigator.pushNamed(context, "chapterSeven");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,7 +99,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text("5 Container widget", style: TextStyle(fontSize: 20.0))),
                 FlatButton(
                   onPressed: _goToChapterSix, 
-                  child: Text("6 Scrollable widget", style: TextStyle(fontSize: 20.0),))
+                  child: Text("6 Scrollable widget", style: TextStyle(fontSize: 20.0),)),
+                FlatButton(onPressed: _goToChapterSeven, 
+                  child: Text("7 functional widget", style: TextStyle(fontSize: 20.0),))
               ],
             ),
           )
