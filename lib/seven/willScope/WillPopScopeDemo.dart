@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class WillPopScopeDemo extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _WillPopScopeState();
-
 }
 
 class _WillPopScopeState extends State<WillPopScopeDemo> {

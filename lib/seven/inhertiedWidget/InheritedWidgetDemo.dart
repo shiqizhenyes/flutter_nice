@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/ShareDataWidget.dart';
+
+import 'ShareDataWidget.dart';
 
 /// 数据共享widget InheitedWidget
 class InheritedWidgetDemo extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => _InheritedWidgetState();
   
@@ -48,7 +50,6 @@ class _InheritedWidgetState extends State<InheritedWidgetDemo> {
 class _TestWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _TestWidgetState();
-
 }
 
 class _TestWidgetState extends State<_TestWidget> {

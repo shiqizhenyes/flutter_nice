@@ -20,18 +20,18 @@ class _ProviderDemoState extends State<ProviderDemo> {
           data: CartModel(),
           child: Builder(builder: (context) {
             return Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Builder(builder: (context) {
                   var car = ChangeNotifierProvider.of<CartModel>(context);
-                  // print("zack "+ car.totalPrice.toString());
-                  return Text("data");
-                },),
-                              
+                  print("zack "+ car.totalPrice.toString());
+                  return Text("total price: ${car.totalPrice}");
+                },),            
                 Builder(builder: (context) {
                   return RaisedButton(onPressed: () {
                     ChangeNotifierProvider.of<CartModel>(context).add(Item(price: 10.0, count: 1));
                   }, 
-                  child: Text("添加商品"),);
+                  child: Text("add goods"),);
                 })
               ],
             );
