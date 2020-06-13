@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/InheritedProvider.dart';
+
+import 'InheritedProvider.dart';
 
 
 class ChangeNotifierProvider<T extends ChangeNotifier> extends StatefulWidget {
@@ -10,13 +11,14 @@ class ChangeNotifierProvider<T extends ChangeNotifier> extends StatefulWidget {
     this.child
   });
   
-
   final Widget child;
   final T data;
 
-  static T of<T extends ChangeNotifier>(BuildContext context) {
+  static T of<T>(BuildContext context) {
     // final type = _typeOf<InheritedProvider<T>>();
     final provider = context.dependOnInheritedWidgetOfExactType<InheritedProvider<T>>();
+    print("zack");
+    print(provider.data);
     return provider.data;
   }
 

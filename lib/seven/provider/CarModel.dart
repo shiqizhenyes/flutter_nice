@@ -1,8 +1,9 @@
 import 'dart:collection';
-import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/Item.dart';
+
+import 'Item.dart';
+
 
 class CartModel extends ChangeNotifier {
   

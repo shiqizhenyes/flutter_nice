@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutternice/InheritedWidgetDemo.dart';
-import 'package:flutternice/ProviderDemo.dart';
 import 'package:flutternice/WillPopScopeDemo.dart';
+import 'package:flutternice/seven/provider/ProviderDemo.dart';
+
+
 
 class ChapterSeven extends StatelessWidget {
 
