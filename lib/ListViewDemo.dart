@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/InfiniteListView.dart';
-import 'package:flutternice/ListPinTitile.dart';
-import 'package:flutternice/ListViewBuilderDemo.dart';
-import 'package:flutternice/ListViewDefaultDemo.dart';
-import 'package:flutternice/ListViewSeparatedDemo.dart';
+
+import 'InfiniteListView.dart';
+import 'ListPinTitle.dart';
+import 'ListViewBuilderDemo.dart';
+import 'ListViewDefaultDemo.dart';
+import 'ListViewSeparatedDemo.dart';
 
 class ListViewDemo extends StatelessWidget {
 

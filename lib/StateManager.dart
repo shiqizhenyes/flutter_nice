@@ -1,9 +1,10 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutternice/ParentCWidget.dart';
-import 'package:flutternice/ParentWidget.dart';
-import 'package:flutternice/TapBoxA.dart';
+
+import 'ParentCWidget.dart';
+import 'ParentWidget.dart';
+import 'TapBoxA.dart';
 
 class StateManager extends StatelessWidget {
 

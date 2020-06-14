@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/TapBoxC.dart';
+
+import 'TapBoxC.dart';
 
 class ParentCWidget extends StatefulWidget {
 

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/ButtonDemo.dart';
-import 'package:flutternice/ImageIconDemo.dart';
-import 'package:flutternice/ProgressIndicatorWidget.dart';
-import 'package:flutternice/StateManager.dart';
-import 'package:flutternice/SwitchCheckBoxDemo.dart';
-import 'package:flutternice/TextFormFieldDemo.dart';
-import 'package:flutternice/TextStyleDemo.dart';
+
+import 'ButtonDemo.dart';
+import 'ImageIconDemo.dart';
+import 'ProgressIndicatorWidget.dart';
+import 'StateManager.dart';
+import 'SwitchCheckBoxDemo.dart';
+import 'TextFormFieldDemo.dart';
+import 'TextStyleDemo.dart';
 
 ///第三章 基础组件
 class ChapterThree extends StatelessWidget {

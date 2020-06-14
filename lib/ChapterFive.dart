@@ -1,12 +1,13 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/ClipDemo.dart';
-import 'package:flutternice/ContainerDemo.dart';
-import 'package:flutternice/ContrainedBoxDemo.dart';
-import 'package:flutternice/DecoratedBoxDemo.dart';
-import 'package:flutternice/PaddingDemo.dart';
-import 'package:flutternice/ScaffoldDemo.dart';
-import 'package:flutternice/TransformDemo.dart';
+
+import 'ClipDemo.dart';
+import 'ContainerDemo.dart';
+import 'ContrainedBoxDemo.dart';
+import 'DecoratedBoxDemo.dart';
+import 'PaddingDemo.dart';
+import 'ScaffoldDemo.dart';
+import 'TransformDemo.dart';
 
 /// 第五章容器类组件
 class ChapterFive extends StatelessWidget {

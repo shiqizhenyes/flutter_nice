@@ -1,4 +1,4 @@
-# flutternice
+# Flutter Nice
 
 A new Flutter application.
 

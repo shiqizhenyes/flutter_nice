@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/InfiniteGridView.dart';
+
+import 'InfiniteGridView.dart';
 
 ///  网格控件
 class GridViewDemo extends StatelessWidget {

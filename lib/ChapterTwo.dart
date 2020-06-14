@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/AssetsDemo.dart';
-import 'package:flutternice/RouterDemo.dart';
+
+import 'AssetsDemo.dart';
+import 'RouterDemo.dart';
 
 ///第二章 第一个flutter app
 

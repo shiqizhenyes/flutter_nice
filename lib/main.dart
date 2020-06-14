@@ -1,13 +1,14 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutternice/ChapterFive.dart';
-import 'package:flutternice/ChapterFour.dart';
-import 'package:flutternice/ChapterOne.dart';
-import 'package:flutternice/ChapterSeven.dart';
-import 'package:flutternice/ChapterSix.dart';
-import 'package:flutternice/ChapterThree.dart';
-import 'package:flutternice/ChapterTwo.dart';
+
+import 'ChapterFive.dart';
+import 'ChapterFour.dart';
+import 'ChapterOne.dart';
+import 'ChapterSeven.dart';
+import 'ChapterSix.dart';
+import 'ChapterThree.dart';
+import 'ChapterTwo.dart';
 
 void main() {
   runApp(MyApp()); 
@@ -34,7 +35,6 @@ class MyApp extends StatelessWidget {
       },
     );
   }
-  
 }
 
 

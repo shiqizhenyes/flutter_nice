@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/CustomScrollViewTestRoute.dart';
-import 'package:flutternice/GridViewDemo.dart';
-import 'package:flutternice/ListViewDemo.dart';
-import 'package:flutternice/ScrollControllerDemo.dart';
-import 'package:flutternice/ScrollProgressDemo.dart';
-import 'package:flutternice/SingleChildScrollViewDemo.dart';
+
+import 'CustomScrollViewTestRoute.dart';
+import 'GridViewDemo.dart';
+import 'ListViewDemo.dart';
+import 'ScrollControllerDemo.dart';
+import 'ScrollProgressDemo.dart';
+import 'SingleChildScrollViewDemo.dart';
 
 ///第六章可滚动组件
 class ChapterSix extends StatelessWidget {

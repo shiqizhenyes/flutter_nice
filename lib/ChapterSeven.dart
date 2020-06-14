@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutternice/seven/inhertiedWidget/InheritedWidgetDemo.dart';
-import 'package:flutternice/seven/provider/ProviderDemo.dart';
-import 'package:flutternice/seven/theme/ThemeAndColorDemo.dart';
-import 'package:flutternice/seven/willScope/WillPopScopeDemo.dart';
+import 'package:nice/seven/future/future_demo.dart';
+import 'package:nice/seven/stream/stream_demo.dart';
+
+import 'seven/inherited/InheritedWidgetDemo.dart';
+import 'seven/provider/ProviderDemo.dart';
+import 'seven/theme/ThemeAndColorDemo.dart';
+import 'seven/willScope/WillPopScopeDemo.dart';
 
 /// 第七章 功能性组件
 class ChapterSeven extends StatelessWidget {
@@ -39,7 +42,17 @@ class ChapterSeven extends StatelessWidget {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return ThemeAndColorDemo();
                   }));
-                }, child: Text("ThemeAndColorDemo"))
+                }, child: Text("ThemeAndColorDemo")),
+                FlatButton(onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return FutureDemo();
+                  }));
+                }, child: Text("FutureDemo")),
+                FlatButton(onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return StreamDemo();
+                  }));
+                }, child: Text("StreamDemo"))
               ],
             )
           ],

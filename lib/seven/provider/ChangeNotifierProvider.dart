@@ -14,7 +14,7 @@ class ChangeNotifierProvider<T extends ChangeNotifier> extends StatefulWidget {
   final Widget child;
   final T data;
 
-  static T of<T>(BuildContext context) {
+  static T of<T extends ChangeNotifier>(BuildContext context) {
     // final type = _typeOf<InheritedProvider<T>>();
     final provider = context.dependOnInheritedWidgetOfExactType<InheritedProvider<T>>();
     print("zack");
@@ -54,7 +54,6 @@ class _ChangeNotifierProviderState<T extends ChangeNotifier> extends State<Chang
     super.dispose();
   }
 
- 
   @override
   Widget build(BuildContext context) {
     return InheritedProvider<T>(

@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/TapBoxB.dart';
+
+import 'TapBoxB.dart';
 
 class ParentWidget extends StatefulWidget {
 

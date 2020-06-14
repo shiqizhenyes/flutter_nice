@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutternice/RowColumnNestedDemo.dart';
+
+import 'RowColumnNestedDemo.dart';
 
 class RowColumnDemo extends StatelessWidget {
 

@@ -1,6 +1,5 @@
-package me.nice.flutternice
+package me.nice.flutter
 
-import android.os.Looper
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
