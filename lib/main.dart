@@ -1,7 +1,7 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
-
+import 'chapter_eight.dart';
 import 'ChapterFive.dart';
 import 'ChapterFour.dart';
 import 'ChapterOne.dart';
@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
         "chapterFive":(context) => ChapterFive(),
         "chapterSix":(context) => ChapterSix(),
         "chapterSeven":(context) => ChapterSeven(),
+        "chapter_eight":(context) => ChapterEight(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -71,6 +72,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.pushNamed(context, "chapterSeven");
   }
 
+  _goToChapterEight() {
+    Navigator.pushNamed(context, "chapter_eight");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -101,7 +106,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: _goToChapterSix, 
                   child: Text("6 Scrollable widget", style: TextStyle(fontSize: 20.0),)),
                 FlatButton(onPressed: _goToChapterSeven, 
-                  child: Text("7 functional widget", style: TextStyle(fontSize: 20.0),))
+                  child: Text("7 Functional widget", style: TextStyle(fontSize: 20.0),)),
+                FlatButton(onPressed: _goToChapterEight,
+                  child: Text("8 Event & Notification", style: TextStyle(fontSize: 20.0),)),
               ],
             ),
           )

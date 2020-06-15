@@ -2,7 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutternice/main.dart';
+
+
 
 class ErrorReport {
 
@@ -39,20 +40,20 @@ class ErrorReport {
     return null;
   }
 
-  void testReport() {
-    FlutterError.onError = (FlutterErrorDetails details) {
-      reportErrorDetail(details);
-    };
-    runZoned(() => runApp(MyApp()),
-        zoneSpecification: ZoneSpecification(
-          print: (Zone self, ZoneDelegate delegate, Zone zone, String line) {
-            collectLog();
-          },
-        ),
-        onError: (Object obj, StackTrace stackTrace) {
-          var details = makeErrorDetail(obj, stackTrace);
-          reportErrorDetail(details);
-        });
-  }
+//  void testReport() {
+//    FlutterError.onError = (FlutterErrorDetails details) {
+//      reportErrorDetail(details);
+//    };
+//    runZoned(() => runApp(MyApp()),
+//        zoneSpecification: ZoneSpecification(
+//          print: (Zone self, ZoneDelegate delegate, Zone zone, String line) {
+//            collectLog();
+//          },
+//        ),
+//        onError: (Object obj, StackTrace stackTrace) {
+//          var details = makeErrorDetail(obj, stackTrace);
+//          reportErrorDetail(details);
+//        });
+//  }
 }
 

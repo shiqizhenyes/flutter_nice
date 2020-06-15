@@ -49,6 +49,14 @@ flutter:
     - assets/avatar3.jpg
     - assets/avatar4.jpg
     - assets/images/app_bar_background.jpg
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-Medium.ttf
+        - asset: assets/fonts/Raleway-SemiBold.ttf
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
