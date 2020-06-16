@@ -13,7 +13,7 @@ class CustomScrollViewTestRoute extends StatelessWidget {
             expandedHeight: 200,
             flexibleSpace: FlexibleSpaceBar(
               title: const Text("CustomScrollViewDemo"),
-              background: Image.asset("assets/images/app_bar_background.jpg", fit: BoxFit.cover,),
+              background: Image.asset("assets/images/beach.jpg", fit: BoxFit.cover,),
             ),
           ),
           SliverPadding(

@@ -48,7 +48,7 @@ flutter:
     - assets/avatar2.jpg
     - assets/avatar3.jpg
     - assets/avatar4.jpg
-    - assets/images/app_bar_background.jpg
+    - assets/images/beach.jpg
 
   fonts:
     - family: Raleway

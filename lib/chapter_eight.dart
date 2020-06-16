@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nice/eight/event_bus_demo.dart';
+import 'package:nice/eight/gesture_event_demo.dart';
+import 'package:nice/eight/notification_demo.dart';
 import 'package:nice/eight/pointer_event_demo.dart';
 
 /// 第八章 事件 和 通知处理
@@ -16,7 +19,22 @@ class ChapterEight extends StatelessWidget {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return PointerEventDemo();
               }));
-            }, child: Text("Pointer Event"))
+            }, child: Text("Pointer Event")),
+            FlatButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return GestureEventDemo();
+              }));
+            }, child: Text("Gesture Event")),
+            FlatButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return EventBusDemo();
+              }));
+            }, child: Text("EventBus")),
+            FlatButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return NotificationDemo();
+              }));
+            }, child: Text("NotificationDemo")),
           ],
         ),
       ),
