@@ -10,8 +10,7 @@ class ChapterTen extends StatelessWidget {
       appBar: AppBar(
         title: Text("ChapterTen"),
       ),
-      body: Center(
-        child: Wrap(
+      body: Wrap(
           children: <Widget>[
             FlatButton(onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -25,7 +24,6 @@ class ChapterTen extends StatelessWidget {
             }, child: Text("CustomWidget")),
           ],
         ),
-      ),
     );
   }
 }
