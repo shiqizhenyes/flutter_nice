@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'forecast.dart';
+part of 'detail.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Forecast _$ForecastFromJson(Map<String, dynamic> json) {
-  return Forecast(
+Detail _$DetailFromJson(Map<String, dynamic> json) {
+  return Detail(
     json['date'] as String,
     json['high'] as String,
     json['low'] as String,
@@ -15,7 +15,7 @@ Forecast _$ForecastFromJson(Map<String, dynamic> json) {
     json['week'] as String,
     json['sunrise'] as String,
     json['sunset'] as String,
-    json['aqi'] as String,
+    json['aqi'] as int,
     json['fx'] as String,
     json['fl'] as String,
     json['type'] as String,
@@ -23,7 +23,7 @@ Forecast _$ForecastFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$ForecastToJson(Forecast instance) => <String, dynamic>{
+Map<String, dynamic> _$DetailToJson(Detail instance) => <String, dynamic>{
       'date': instance.date,
       'high': instance.high,
       'low': instance.low,

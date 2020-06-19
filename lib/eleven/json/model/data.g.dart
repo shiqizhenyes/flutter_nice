@@ -9,14 +9,18 @@ part of 'data.dart';
 Data _$DataFromJson(Map<String, dynamic> json) {
   return Data(
     json['shidu'] as String,
-    json['pm25'] as String,
-    json['pm10'] as String,
+    json['pm25'] as double,
+    json['pm10'] as double,
     json['quality'] as String,
     json['wendu'] as String,
     json['ganmao'] as String,
-    json['forecast'] == null
+    (json['forecast'] as List)
+        ?.map((e) =>
+            e == null ? null : Detail.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
+    json['yesterday'] == null
         ? null
-        : Forecast.fromJson(json['forecast'] as Map<String, dynamic>),
+        : Detail.fromJson(json['yesterday'] as Map<String, dynamic>),
   );
 }
 
@@ -28,4 +32,5 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'wendu': instance.wendu,
       'ganmao': instance.ganmao,
       'forecast': instance.forecast,
+      'yesterday': instance.yesterday,
     };

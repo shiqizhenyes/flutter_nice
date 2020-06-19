@@ -3,6 +3,7 @@ import 'package:nice/eleven/dio/chunk_download.dart';
 import 'package:nice/eleven/dio/dio_demo.dart';
 import 'package:nice/eleven/http_client/http_clent_demo.dart';
 import 'package:nice/eleven/io/io_operation_demo.dart';
+import 'package:nice/eleven/json/bj_weather.dart';
 import 'package:nice/eleven/json/json_model_demo.dart';
 import 'package:nice/eleven/json/user_list_demo.dart';
 import 'package:nice/eleven/web_socket/web_socket_demo.dart';
@@ -59,6 +60,11 @@ class ChapterEleven extends StatelessWidget {
                 return UsersListDemo();
               }));
             }, child: Text("UsersList")),
+            FlatButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return BJWeather();
+              }));
+            }, child: Text("BJWeather")),
           ],
         ),
       ),

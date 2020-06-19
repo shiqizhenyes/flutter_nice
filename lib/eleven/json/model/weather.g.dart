@@ -9,7 +9,7 @@ part of 'weather.dart';
 Weather _$WeatherFromJson(Map<String, dynamic> json) {
   return Weather(
     json['message'] as String,
-    json['status'] as String,
+    json['status'] as int,
     json['data'] == null
         ? null
         : Data.fromJson(json['data'] as Map<String, dynamic>),

@@ -11,7 +11,7 @@ class Weather {
   Weather(this.message, this.status, this.data, this.time, this.date, this.cityInfo,);
 
   final String message;
-  final String status;
+  final int status;
   final String date;
   final String time;
   final CityInfo cityInfo;
