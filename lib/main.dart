@@ -1,9 +1,13 @@
 
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:nice/chapter_eleven.dart';
 import 'package:nice/chapter_nine.dart';
 import 'package:nice/chapter_ten.dart';
+import 'package:nice/chapter_thirteen.dart';
+import 'package:nice/chapter_twelve.dart';
+import 'package:nice/thirteen/nice_localizations_delegate.dart';
 import 'chapter_eight.dart';
 import 'ChapterFive.dart';
 import 'ChapterFour.dart';
@@ -26,6 +30,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        NiceLocalizationsDelegate(),
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'),
+        const Locale('zh', 'CN')
+      ],
+      locale: Localizations.localeOf(context, nullOk: false),
       routes: {
         "chapterOne":(context) => ChapterOne(),
         "chapterTwo":(context) => ChapterTwo(),
@@ -38,6 +52,8 @@ class MyApp extends StatelessWidget {
         "chapter_nine":(context) => ChapterNine(),
         "chapter_ten":(context) => ChapterTen(),
         "chapter_eleven":(context) => ChapterEleven(),
+        "chapter_twelve":(context) => ChapterTwelve(),
+        "chapter_thirteen":(context) => ChapterThirteen(),
         "/":(context) => MyHomePage(title: "Nice flutter")
       },
     );
@@ -96,6 +112,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
 
+  _goToChapterTwelve() {
+    Navigator.pushNamed(context, "chapter_twelve");
+  }
+
+  _goToChapterThirteen() {
+    Navigator.pushNamed(context, "chapter_thirteen");
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -141,6 +166,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 FlatButton(onPressed: _goToChapterEleven,
                     child: Text("11 File & Request",
+                      style: TextStyle(fontSize: 20.0),
+                    )
+                ),
+                FlatButton(onPressed: _goToChapterTwelve,
+                    child: Text("12 Package & Plugin",
+                      style: TextStyle(fontSize: 20.0),
+                    )
+                ),
+                FlatButton(onPressed: _goToChapterThirteen,
+                    child: Text("13 International",
                       style: TextStyle(fontSize: 20.0),
                     )
                 ),

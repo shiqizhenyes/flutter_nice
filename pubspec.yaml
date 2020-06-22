@@ -28,6 +28,9 @@ dependencies:
   dio: 3.0.9
   web_socket_channel: 1.1.0
   json_annotation: ^3.0.1
+  webview_flutter: ^0.3.22+1
+  flutter_localizations:
+    sdk: flutter
 #  json_serializable: ^3.3.0
   # flutter_fps: ^0.0.2
   # statsfl: ^0.0.3+1
