@@ -16,6 +16,9 @@ class _InternationalState extends State<InternationalDemo> {
   void _changeLanguage(index) {
     switch(index) {
       case 0:
+
+        print(NiceLocalizations.of(context).title);
+//        print(NiceLocalizations.of(context).name);
         break;
       case 1:
         break;

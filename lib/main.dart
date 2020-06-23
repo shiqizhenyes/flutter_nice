@@ -31,15 +31,26 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       localizationsDelegates: [
+        ///自己必须写在最上面，否则获取不到
+        NiceLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
-        NiceLocalizationsDelegate(),
       ],
       supportedLocales: [
         const Locale('en', 'US'),
-        const Locale('zh', 'CN')
+        const Locale('en', 'UK'),
+        const Locale('ja', 'JP'),
+        const Locale.fromSubtags(languageCode: 'zh'),
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans'),
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant'),
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN'),
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
+        const Locale.fromSubtags(languageCode: 'zh', scriptCode: 'Hant', countryCode: 'HK')
       ],
-      locale: Localizations.localeOf(context, nullOk: false),
+      localeResolutionCallback: (locale, callback) {
+        print("main " + locale.languageCode);
+        return locale;
+      },
       routes: {
         "chapterOne":(context) => ChapterOne(),
         "chapterTwo":(context) => ChapterTwo(),
