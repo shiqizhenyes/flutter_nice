@@ -4,4 +4,5 @@
 
 本项目是根据flutter 中文官网的flutter 一书和本人自己的理解而来的，希望能帮助想要学习flutter 的人们，本项目代码仅供参考学习之用。
 
-
+## 参考链接
+[《flutter 实战》](https://book.flutterchina.club "flutter 实战")
